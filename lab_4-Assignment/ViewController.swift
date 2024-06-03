@@ -50,6 +50,8 @@ class ViewController: UIViewController,UITextFieldDelegate {
     }
     @IBAction func resetButton(_ sender: Any) {
         clearInfo()
+        displayMessage.textColor = UIColor.black;
+        displayAgreement.textColor = UIColor.black;
     }
     
     
@@ -97,7 +99,9 @@ class ViewController: UIViewController,UITextFieldDelegate {
         if firstName.text?.isEmpty == true || lastName.text?.isEmpty == true   || address.text?.isEmpty == true || dateOfBirth.text?.isEmpty==true || city.text?.isEmpty == true {
             displayMessage.text = "Complete the missing info! \n";
             displayMessage.textColor = UIColor.red;
-            }
+        } else {
+            displayMessage.text = "Accepted";
+        }
 
     }
     
